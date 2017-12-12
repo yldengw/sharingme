@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: '微软雅黑', 'Microsoft YaHei', '宋体', Tahoma, Helvetica, Arial, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: '微软雅黑', 'Microsoft YaHei', '宋体', Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 162px;
+}
+
+@import "/assets/css/bootstrap-v3.3.7/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import "/assets/css/primeng-themes-my/primeng.min.css";
+@import "/assets/css/primeng-themes-my/themes/bootstrap-my/theme.css";
+ @import "/assets/css/mystyle.css"; 
+@import "/assets/css/application.css"; 
+ @import "/assets/css/vendor.css"; 
+ @import "/assets/css/elephant.css"; 
+ .single{
+    margin-top: -50px;
+}
+.single .layout-content{
+    margin-left: 0px;
+}
+.single .layout-content-body{
+    position: absolute;
+    top: 20%;
+}
