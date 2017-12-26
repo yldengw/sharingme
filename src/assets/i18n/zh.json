@@ -1,0 +1,17 @@
+{
+    "app":{
+        "welcome":"Welcome",
+        "logout":"Logout",
+        "login":"Login",
+        "amap":"Amap",
+        "articles":"Articles",
+        "echart":"Echart",
+        "editor": "Editor",
+        "dashboard": "dashboard",
+        "UIElements": "UIElements",
+        "Forms": "Forms",
+        "Tables": "Tables",
+        "Date": "Date",
+        "Upload": "Upload"
+    }
+}
