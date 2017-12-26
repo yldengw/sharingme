@@ -1,0 +1,446 @@
+<!--angular start-->
+<div class="post-detail-container" *ngIf=" title=='angular' && article.angular">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.angular.title }}</h4>
+      <p>{{ article.angular.author }} {{ article.angular.postTime }} 点击：{{ article.angular.readTimes }} 评论：{{ article.HTML5.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.angular.text">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+        1、a刮泥ngular的数据绑定采用脏检查机制
+        2、$apply和$digest的区别
+        3、ng-if和ng-show的对比
+        4、ng-repeat迭代数组的时候，如果数组中有相同值，加track by $Index
+        5、内置filter和自定义filter
+        6、factory、service和provider 关系
+        7、作用域的继承关系
+        8、传播事件
+        <!-- <span>"$scope.$emit("someEvent", );"</span>
+        <span>"$scope.$broadcast("someEvent", );"</span> -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <p style="color:blue"><a href="http://blog.csdn.net/ztguang/article/details/53107016"> 利用Angular2的Observables实现交互控制</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <p style="color:blue"><a href="https://angular.cn/resources/">angular的相关资源</a></p>
+    </div>
+  </div>
+</div>
+<!--angular end-->
+
+<!--HTML5 start-->
+<div class="post-detail-container" *ngIf=" title=='HTML5' && article.HTML5">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.HTML5.title }}</h4>
+      <p>{{ article.HTML5.author }} {{ article.HTML5.postTime }} 点击：{{ article.HTML5.readTimes }} 评论：{{ article.HTML5.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.HTML5.text">
+    </div>
+  </div>
+  <!--canvas绘制 start-->
+  <div align="center">
+    <canvas id="myCanvas" width="500" height="200" style="border:2px solid #6699cc"></canvas>
+    <div class="control-ops">
+      <button type="button" class="btn btn-primary" onclick="javascript:clearArea();return false;">清空画板</button>
+      Line width :
+      <select id="selWidth">
+        <option value="1">1</option>
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="7">7</option>
+        <option value="9" selected="selected">9</option>
+        <option value="11">11</option>
+      </select>
+      Color :
+      <select id="selColor">
+        <option value="black">black</option>
+        <option value="blue" selected="selected">blue</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="yellow">yellow</option>
+        <option value="gray">gray</option>
+      </select>
+    </div>
+  </div>
+  <!--canvas绘制 end-->
+</div>
+<!--HTML5 end-->
+<!--CSS3 start-->
+ <div class="post-detail-container" *ngIf=" title=='CSS3' && article.CSS3">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.CSS3.title }}</h4>
+      <p>{{ article.CSS3.author }} {{ article.CSS3.postTime }} 点击：{{ article.CSS3.readTimes }} 评论：{{ article.HTML5.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.CSS3.text">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      cookie，sessionStorage，localeStorage的区别
+      <br/> cookie是存储在浏览器端， 并且随浏览器的请求一起发送到服务器端的，它有一定的过期时间， 到了过期时间自动会消失
+      <br/> sessionStorage和localeStorage也是存储在客户端的，同属于web Storage，比cookie的存储大小要大有8m，cookie只有4kb， localeStorage是持久化的存储在客户端，如果用户不手动清除的话，不会自动消失，
+      会一直存在，sessionStorage也是存储在客户端， 但是它的存活时间是在一个回话期间，只要浏览器的回话关闭了就会自动消失
+    </div>
+  </div>
+</div>
+<!--CSS3 end-->
+
+<!--Javascript start-->
+ <div class="post-detail-container" *ngIf=" title=='Javascript' && article.Javascript">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.Javascript.title }}</h4>
+      <p>{{ article.Javascript.author }} {{ article.Javascript.postTime }} 点击：{{ article.Javascript.readTimes }} 评论：{{ article.Javascript.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.Javascript.text">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      1、闭包
+      <img src="./assets/img/bibao.png"> 当函数a的内部函数b被函数a外的一个变量引用的时候，就创建了一个闭包
+      <br/> 闭包的作用就是在a执行完并返回后，闭包使得Javascript的垃圾回收机制GC不会收回a所占用的资源，因为a的内部函数b的执行需要依赖a中的变量
+      <br/> Javascript的垃圾回收机制
+      <br/> 在Javascript中，如果一个对象不再被引用，那么这个对象就会被GC回收。如果两个对象互相引用，而不再被第3者所引用，那么这两个互相引用的对象也会被回收。因为函数a被b引用，b又被a外的c引用，这就是为什么函数a执行后不会被回收的原因。
+    </div>
+  </div>
+  <div class="col-sm-12">
+    2、网页布局 a、静态布局 <br/> 
+    不管浏览器尺寸具体是多少，网页布局就按照当时写代码的布局来布置,在屏幕宽高有调整时，使用横向和竖向的滚动条来查阅被遮掩部分<br/>
+     b、弹性布局 <br/> 
+     其中flex-flow是flex-direction和flex-wrap属性的简写方式，语法如下：<br/>
+      flex-flow:
+    <!-- <flex-direction> ||
+      <flex-wrap></flex-wrap> -->
+      flex-direction: row（初始值） | row-reverse | column | column-reverse flex-wrap: nowrap（初始值） | wrap | wrap-reverse flex-direction定义了弹性项目在弹性容器中的放置方向，默认是row，即行内方向（一般而言是由左往右，但注意这个和书写模式有关）。
+      flex-wrap定义是否需要拆行以使得弹性项目能被容器包含。*-reverse代表相反的方向。 两者结合起来即flex-flow属性就确定了弹性容器在main axis和cross axis两个方向上的显示方式 <br/> 3、自适应布局
+      <br/> 分别为不同的屏幕分辨率定义布局。布局切换时页面元素发生改变，但在每个布局中，页面元素不随窗口大小的调整发生变化。  你可以把自适应布局看作是静态布局的一个系列。  就是说你看到的页面，里面元素的位置会变化而大小不会变化
+      <br/> 4、流式布局
+      <br/> 是页面元素的宽度按照屏幕进行适配调整，主要的问题是如果屏幕尺度跨度太大，那么在相对其原始设计而言过小或过大的屏幕上不能正常显示  你看到的页面，元素的大小会变化而位置不会变化——这就导致如果屏幕太大或者太小都会导致元素无法正常显示。
+      <br/> 5、响应式布局
+      <br/> 分别为不同的屏幕分辨率定义布局，同时，在每个布局中，应用流式布局的理念，即页面元素宽度随着窗口调整而自动适配。  可以把响应式布局看作是流式布局和自适应布局设计理念的融合。  每个屏幕分辨率下面会有一个布局样式，同时位置会变而且大小也会变
+      <br/>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <p style="color:blue"><a href="http://www.cnblogs.com/liyunhua/p/4529086.html">总结的js性能优化的小知识</a></p>
+      <p style="color:blue"><a href="http://blog.csdn.net/zyz511919766/article/details/7276089">JS的全局变量跟局部变量</a></p>
+    </div>
+  </div>
+</div> 
+<!--Javascript end-->
+<!--SSM start-->
+<div class="post-detail-container" *ngIf=" title=='SSM' && article.SSM">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.SSM.title }}</h4>
+      <p>{{ article.SSM.author }} {{ article.SSM.postTime }} 点击：{{ article.SSM.readTimes }} 评论：{{ article.SSM.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.SSM.text">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+        Spring是一个轻量级的控制反转（IoC）和面向切面（AOP）的容器框架
+        <p style="color:blue">依赖注入spring的注入方式：</p>
+        <p style="color:red">set注入方式</p>
+        <p style="color:red">静态工厂注入方式</p>
+        <p style="color:red"> 构造方法注入方式</p>
+        <p style="color:red">基于注解的方式</p>
+    </div>
+    <div class="col-sm-12">
+        <p style="color:blue">@Autowired与@Resource的区别：</p>
+        <p style="color:red">@Autowired与@Resource都可以用来装配bean. 都可以写在字段上,或写在setter方法上</p>
+        <p style="color:red">@Autowired默认按类型装配（这个注解是属业spring的），默认情况下必须要求依赖对象必须存在，如果要允许null 值，可以设置它的required属性为false，如：@Autowired(required=false) ，如果我们想使用名称装配可以结合@Qualifier注解进行使用</p>
+        <p style="color:red"> @Resource（这个注解属于J2EE的），默认安照名称进行装配，名称可以通过name属性进行指定， 
+            如果没有指定name属性，当注解写在字段上时，默认取字段名进行按照名称查找，如果注解写在setter方法上默认取属性名进行装配。 当找不到与名称匹配的bean时才按照类型进行装配。但是需要注意的是，如果name属性一旦指定，就只会按照名称进行装配</p>
+    </div>
+    <div class="col-sm-12">
+        <p style="color:blue">IOC和AOP</p>
+        <p style="color:red">许多应用都是通过彼此间的相互合作来实现业务逻辑的，如类A要调用类B的方法，以前我们都是在类A中，通过自身new一个类B，然后在调用类B的方法，现在我们把new类B的事情交给spring来做，在我们调用的时候，容器会为我们实例化</p>
+        <p style="color:red">面向切面编程，在我们的应用中，经常需要做一些事情，但是这些事情与核心业务无关，比如，要记录所有update*方法的执行时间时间，操作人等等信息，记录到日志，
+            通过spring的AOP技术，就可以在不修改update*的代码的情况下完成该需求</p>
+    </div>
+  </div>
+</div>
+<!--SSM end-->
+<!--前端打包工具 start-->
+<div class="post-detail-container" *ngIf=" title=='strappingTool' && article.strappingTool">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.strappingTool.title }}</h4>
+      <p>{{ article.strappingTool.author }} {{ article.strappingTool.postTime }} 点击：{{ article.strappingTool.readTimes }} 评论：{{ article.strappingTool.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.strappingTool.text">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+        <p style="color:blue">什么是Webpack</p>
+        <p style="color:red">它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用</p>
+    </div>
+    <div class="col-sm-12">
+        <p style="color:blue">WebPack和Grunt以及Gulp相比有什么特性</p>
+        <p style="color:red">Grunt和Gulp的工作方式是：在一个配置文件中，指明对某些文件进行类似编译，组合，压缩等任务的具体步骤，工具之后可以自动替你完成这些任务</p>
+        <p style="color:red">Webpack的工作方式是：把你的项目当做一个整体，通过一个给定的主文件（如：index.js），Webpack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包为一个（或多个）浏览器可识别的JavaScript文件</p>
+    </div>
+    <div class="col-sm-12">
+        <p style="color:blue">IOC和AOP</p>
+        <p style="color:red">许多应用都是通过彼此间的相互合作来实现业务逻辑的，如类A要调用类B的方法，以前我们都是在类A中，通过自身new一个类B，然后在调用类B的方法，现在我们把new类B的事情交给spring来做，在我们调用的时候，容器会为我们实例化</p>
+        <p style="color:red">面向切面编程，在我们的应用中，经常需要做一些事情，但是这些事情与核心业务无关，比如，要记录所有update*方法的执行时间时间，操作人等等信息，记录到日志，
+            通过spring的AOP技术，就可以在不修改update*的代码的情况下完成该需求</p>
+    </div>
+  </div>
+</div>
+<!--AgileManagement start-->
+<div class="post-detail-container" *ngIf=" title=='AgileManagement' && article.AgileManagement">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.AgileManagement.title }}</h4>
+      <p>{{ article.AgileManagement.author }} {{ article.AgileManagement.postTime }} 点击：{{ article.AgileManagement.readTimes }} 评论：{{ article.AgileManagement.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.AgileManagement.text">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+        <p style="color:blue">敏捷管理流程</p>
+        <p style="color:red">Scrum 是一个用于开发和维护复杂产品的框架 ，是一个增量的、迭代的开发过程。在这个框架中，整个开发过程由若干个短的迭代周期组成，一个短的迭代周期称为一个Sprint，每个Sprint的建议长度是2到4周。在Scrum中，使用产品Backlog来管理产品的需求，产品backlog是一个按照商业价值排序的需求列表，列表条目的体现形式通常为用户故事。Scrum团队总是先开发对客户具有较高价值的需求。在Sprint中，Scrum团队从产品Backlog中挑选最高优先级的需求进行开发。挑选的需求在Sprint计划会议上经过讨论、分析和估算得到相应的任务列表，我们称它为Sprint backlog。在每个迭代结束时，Scrum团队将递交潜在可交付的产品增量</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+        <p style="color:blue"> <a href="http://www.scrumcn.com/agile/scrum-knowledge-library/scrum.html#tab-id-1">敏捷管理相关说明</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+        <p style="color:red">3个角色</p>
+        <p style="color:blue">1、产品负责人</p>
+        <p style="color:blue">2、Scrum master</p>
+        <p style="color:blue">3、开发团队</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+        <p style="color:red">3个工件</p>
+        <p style="color:blue">1、产品backlog</p>
+        <p style="color:blue">2、sprintBacklog</p>
+        <p style="color:blue">3、</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+        <p style="color:red">5个事件</p>
+        <p style="color:blue">1、Sprint（Sprint本身是一个事件，包括了如下4个事件）</p>
+        <p style="color:blue">2、sprint计划会议</p>
+        <p style="color:blue">3、每日站会</p>
+        <p style="color:blue">4、Sprint评审会议</p>
+        <p style="color:blue">5、Sprint回顾会议</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <p style="color:blue"><a href="http://www.itnpc.com/news/web/146375406669578.html">基于JIRA的Scrum敏捷开发的项目管理</a></p>
+      <p style="color:blue"><a href="http://www.itfarmer.com.cn/1774.html">敏捷开发团队中PO和SM角色介绍</a></p>
+    </div>
+  </div>
+</div>
+<!--abstract start-->
+<div class="post-detail-container" *ngIf=" title=='abstract' && article.abstract">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.abstract.title }}</h4>
+      <p>{{ article.abstract.author }} {{ article.abstract.postTime }} 点击：{{ article.abstract.readTimes }} 评论：{{ article.abstract.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.abstract.text">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+        <p style="color:blue">画图工具在线： <a href="https://d.x.x/#LUntitled%20Diagram.xml">Flowchart Maker & Online Diagram Software</a></p>
+        <p style="color:blue"> <a href="https://www.tubiaoxiu.com/src/index.html#/app/charting_resource">图表秀</a></p>
+    </div>
+  </div>
+</div>
+<!--designPattern start-->
+<div class="post-detail-container" *ngIf=" title=='designPattern' && article.designPattern">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.designPattern.title }}</h4>
+      <p>{{ article.designPattern.author }} {{ article.designPattern.postTime }} 点击：{{ article.designPattern.readTimes }} 评论：{{ article.abstract.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.designPattern.text">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+        <p style="color:blue"><a href="http://www.cnblogs.com/1wen/p/7652097.html">设计模式</a></p>
+    </div>
+  </div>
+</div>
+<!--shiro start-->
+<div class="post-detail-container" *ngIf=" title=='shiro' && article.shiro">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.shiro.title }}</h4>
+      <p>{{ article.shiro.author }} {{ article.shiro.postTime }} 点击：{{ article.shiro.readTimes }} 评论：{{ article.shiro.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.shiro.text">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+        <p style="color:blue"><a href="http://blog.csdn.net/u011781521/article/details/55094751">shiro相关</a></p>
+    </div>
+  </div>
+</div>
+<!--git start-->
+<div class="post-detail-container" *ngIf=" title=='git' && article.git">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.git.title }}</h4>
+      <p>{{ article.git.author }} {{ article.git.postTime }} 点击：{{ article.git.readTimes }} 评论：{{ article.git.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.git.text">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+        <p style="color:blue"><a href="https://github.com/yldengw/sharingme">git地址</a></p>
+        <p style="color:blue"><a href="http://blog.csdn.net/zamamiro/article/details/70172900">Git的使用--如何将本地项目上传到Github</a></p>
+        <p style="color:blue"><a href="https://www.cnblogs.com/babywin/articles/6071260.html">利用Github Pages展示自己的项目</a></p>
+    </div>
+  </div>
+</div>
+<!--WebUI start-->
+<div class="post-detail-container" *ngIf=" title=='WebUI' && article.WebUI">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.WebUI.title }}</h4>
+      <p>{{ article.WebUI.author }} {{ article.WebUI.postTime }} 点击：{{ article.WebUI.readTimes }} 评论：{{ article.WebUI.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.WebUI.text">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+        <p style="color:blue"><a href="https://www.primefaces.org/primeng/#/">primeng</a></p>
+        <p style="color:blue"><a href="https://ng.ant.design/#/components/tag">ant</a></p>
+        <p style="color:blue"><a href="https://www.cnblogs.com/babywin/articles/6071260.html">利用Github Pages展示自己的项目</a></p>
+    </div>
+  </div>
+</div>
+<!--jquery start-->
+<div class="post-detail-container" *ngIf=" title=='jquery' && article.jquery">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.jquery.title }}</h4>
+      <p>{{ article.jquery.author }} {{ article.jquery.postTime }} 点击：{{ article.jquery.readTimes }} 评论：{{ article.jquery.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.jquery.text">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+        <p style="color:blue"><a href="http://www.open-open.com/lib/view/open1401757126775.html">jQuery性能优化</a></p>
+    </div>
+  </div>
+</div>
+<!--es6 start-->
+<div class="post-detail-container" *ngIf=" title=='es6' && article.es6">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.es6.title }}</h4>
+      <p>{{ article.es6.author }} {{ article.es6.postTime }} 点击：{{ article.es6.readTimes }} 评论：{{ article.es6.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.es6.text">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+        <p style="color:blue"><a href="http://es6.ruanyifeng.com/#docs/string">es6入门</a></p>
+    </div>
+  </div>
+</div>
+<!--UnitTest start-->
+<div class="post-detail-container" *ngIf=" title=='UnitTest' && article.UnitTest">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>{{ article.UnitTest.title }}</h4>
+      <p>{{ article.UnitTest.author }} {{ article.UnitTest.postTime }} 点击：{{ article.UnitTest.readTimes }} 评论：{{ article.UnitTest.commentTimes
+        }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" [innerHTML]="article.UnitTest.text">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+        <p style="color:blue"></p>
+    </div>
+  </div>
+</div>

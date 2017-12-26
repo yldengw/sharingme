@@ -1,0 +1,104 @@
+<div class="layout-sidebar">
+        <div class="layout-sidebar-backdrop"></div>
+        <div class="layout-sidebar-body">
+            <div class="custom-scrollbar">
+                <nav id="sidenav" class="sidenav-collapse collapse">
+                    <ul class="sidenav">
+                        <li class="sidenav-search hidden-md hidden-lg">
+                            <form class="sidenav-form" action="http://demo.naksoid.com/">
+                                <div class="form-group form-group-sm">
+                                    <div class="input-with-icon">
+                                        <input class="form-control" type="text" placeholder="Search…">
+                                        <span class="icon icon-search input-icon"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="sidenav-heading">模块与导航</li>
+                        <li class="sidenav-item">
+                            <!--2 routerLinkActive 可以如下传递多个css值-->
+                            <a routerLink="/dashboard" [routerLinkActive]="['active','somevalue']">
+                                <span class="badge badge-success">26</span>
+                                <span class="sidenav-icon icon icon-home"></span>
+                                <span class="sidenav-label">{{'app.dashboard' | translate}}</span>
+                            </a>
+                        </li>
+                        <li class="sidenav-item has-subnav active" >
+                            <!--1 routerLinkActive 传递单个值-->
+                            <a routerLink="/articles" routerLinkActive="active">
+                                <span class="sidenav-icon icon icon-th"></span>
+                                <span class="sidenav-label">{{'app.articles' | translate}}</span>
+                            </a>
+                        </li>
+                        <li class="sidenav-item has-subnav active" >
+                            <a routerLink="/echart" routerLinkActive="active">
+                                <span class="sidenav-icon icon icon-th"></span>
+                                <span class="sidenav-label">{{'app.echart' | translate}}</span>
+                            </a>
+                        </li>
+                        <li class="sidenav-item has-subnav active">
+                            <a routerLink="/editor" routerLinkActive="active">
+                                <span class="sidenav-icon icon icon-th"></span>
+                                <span class="sidenav-label">{{'app.editor' | translate}}</span>
+                            </a>
+                        </li>
+    
+                        <li class="sidenav-item">
+                            <a routerLink="/amap" routerLinkActive="active" >
+                                <span class="sidenav-icon icon icon-columns"></span>
+                                <span class="sidenav-label">{{'app.amap' | translate}}</span>
+                            </a>
+                        </li>
+                        <li class="sidenav-heading">Components</li>
+                        <li class="sidenav-item has-subnav">
+                            <a  class="nav-header collapsed" routerLinkActive="active" aria-haspopup="true" style="cursor:pointer" (click)="changeSider()">
+                                <span class="sidenav-icon icon icon-briefcase"></span>
+                                <span class="sidenav-label">{{'app.UIElements' | translate}}</span>
+                            </a>
+
+                             <ul  class="nav nav-list secondmenu" *ngIf="collapse">
+                                    <li class="sidenav-item has-subnav">
+                                            <a routerLink="/forms" aria-haspopup="true">
+                                                <span class="sidenav-icon icon icon-edit"></span>
+                                                <span class="sidenav-label">{{'app.Forms' | translate}}</span>
+                                            </a>
+                                    </li>
+                                    <li class="sidenav-item has-subnav">
+                                        <a routerLink="/tables" aria-haspopup="true">
+                                            <span class="badge badge-danger">New</span>
+                                            <span class="sidenav-icon icon icon-list"></span>
+                                            <span class="sidenav-label">{{'app.Tables' | translate}}</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidenav-item has-subnav">
+                                            <a routerLink="/date" aria-haspopup="true">
+                                                <span class="sidenav-icon icon icon icon-list"></span>
+                                                <span class="sidenav-label">{{'app.Date' | translate}}</span>
+                                            </a>
+                                    </li>
+                                    <li class="sidenav-item has-subnav">
+                                            <a routerLink="/upload" aria-haspopup="true">
+                                                <span class="sidenav-icon icon icon icon-list"></span>
+                                                <span class="sidenav-label">{{'app.Upload' | translate}}</span>
+                                            </a>
+                                    </li>
+                            </ul> 
+                        </li>
+                      
+                        <!-- <li class="sidenav-item has-subnav">
+                            <a href="#" aria-haspopup="true">
+                                <span class="badge badge-danger">New</span>
+                                <span class="sidenav-icon icon icon-pie-chart"></span>
+                                <span class="sidenav-label">Charts</span>
+                            </a>
+                        </li> -->
+                    </ul>
+                    <!-- <app-tree [treelists]="menu"></app-tree> -->
+                </nav>
+            </div>
+        </div>
+        <div>
+                {{currentTime | date:'yyyy-MM-dd HH:mm:ss'}}
+         </div>
+    </div>
+  

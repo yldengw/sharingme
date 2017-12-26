@@ -1,0 +1,21 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+			<div class="navbar-header" style="margin-top: 10px;margin-left:-92px">
+			  <p-selectButton [options]="languages" [(ngModel)]="selectedType" (click)="changeLan()"></p-selectButton>
+			</div>
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">SharingMe</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a (click)="logout()">{{'app.login' | translate}}</a></li>
+				<li><a href="javascript:;" (click)="logout()">{{'app.logout' | translate}}</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
