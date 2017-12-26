@@ -1,0 +1,17 @@
+{
+    "app": {
+        "articles": "动态查询",
+        "welcome": "欢迎你",
+        "logout": "注销",
+        "login": "登录",
+        "amap": "高德地图",
+        "echart": "集成图表",
+        "editor": "富文本编辑器",
+        "dashboard": "仪表盘",
+        "UIElements": "UI组件",
+        "Forms": "表单",
+        "Tables": "表格",
+        "Date": "日期",
+        "Upload": "文件上传"
+    }
+}
